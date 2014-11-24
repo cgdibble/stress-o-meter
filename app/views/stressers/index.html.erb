@@ -1,0 +1,22 @@
+<!-- make the O bigger and bold -->
+<h1>Stress-<span class="o-emphasis">O</span>-meter</h1>
+
+<!-- turn off bullet point -->
+<div class="container">
+  <ul class="stresser-list">
+    <% @stressers.each do |stresser| %>
+      <li>
+        <%= stresser.description %>:
+        <%= stresser.point_value %>
+        <button>
+          <%= link_to 'Edit', edit_stresser_path(stresser) %>
+        </button>
+        <button>
+          <%= link_to 'Now Stress Free', stresser_path(stresser), method: :delete %>
+        </button>
+      </li>
+      <br>
+    <% end %>
+  </ul>
+    <%= render 'create' %>
+</div>

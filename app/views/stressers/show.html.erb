@@ -1,0 +1,13 @@
+<!-- make the O bigger and bold -->
+<h1>The Dibble Family Stress-<span class="o-emphasis">O</span>-meter</h1>
+
+<!-- turn off bullet point -->
+<ul class="stresser-list">
+  <% @stressers.each do |stresser| %>
+    <li>
+      <%= stresser.description %>:
+      <%= stresser.point_value %>
+      <%= link_to 'Edit', edit_stresser_path(stresser) %>
+    </li>
+  <% end %>
+</ul>
