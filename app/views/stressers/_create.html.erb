@@ -1,8 +1,12 @@
-<%= form_for @stresser do |f| %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <br>
-  <%= f.label :point_value %>
-  <%= f.text_field :point_value %>
-  <%= f.submit 'Create Stresser' %>
-<% end %>
+<div class="new-stresser-form">
+  <%= form_for @stresser do |f| %>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+    <br>
+    <%= f.label :point_value %><br>
+    <%= f.text_field :point_value %>
+    <span class="submit-stresser-btn">
+      <%= f.submit 'Create Stresser' %>
+    </span>
+  <% end %>
+</div>

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
+h1, h3 {
   text-align: center
 }
 
@@ -11,13 +11,31 @@ h1 {
   text-decoration: none;
 }
 
+.new-stresser-form {
+  margin: auto;
+  width: 30%;
+  text-align:left;
+}
+
+.stresser {
+  text-align:center;
+}
+
+.submit-stresser-btn {
+  margin: auto;
+}
+
 .stresser-list {
   list-style-type: none;
   font-size: 20px;
   padding: 10px;
+  text-align:left;
 }
 
 .container {
-  wdith: 50%;
-  margin-left: 570px;
+  background-color:orange;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
 }

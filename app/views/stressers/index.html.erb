@@ -1,11 +1,13 @@
 <!-- make the O bigger and bold -->
-<h1>Stress-<span class="o-emphasis">O</span>-meter</h1>
-
+<h1>Stress-O-meter</h1>
+<h3>Thanksgiving 2014 Edition</h3>
 <!-- turn off bullet point -->
 <div class="container">
+  <%= render 'create' %>
   <ul class="stresser-list">
-    <% @stressers.each do |stresser| %>
-      <li>
+    <% @stressers.each.with_index do |stresser, index| %>
+      <li class="stresser">
+        <%= index + 1 %>.
         <%= stresser.description %>:
         <%= stresser.point_value %>
         <button>
@@ -18,5 +20,4 @@
       <br>
     <% end %>
   </ul>
-    <%= render 'create' %>
 </div>
