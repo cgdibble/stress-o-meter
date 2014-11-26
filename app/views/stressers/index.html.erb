@@ -10,6 +10,7 @@
         <%= index + 1 %>.
         <%= stresser.description %>:
         <%= stresser.point_value %>
+        <br>
         <button>
           <%= link_to 'Edit', edit_stresser_path(stresser) %>
         </button>
@@ -19,5 +20,14 @@
       </li>
       <br>
     <% end %>
+    <li class="total">
+      <% sum = 0 %>
+      <% @stressers.each {|stresser| sum += stresser.point_value} %>
+      <p>
+        Total Stress Value:
+        <br>
+        <%= sum %>
+      </p>
+    </li>
   </ul>
 </div>
